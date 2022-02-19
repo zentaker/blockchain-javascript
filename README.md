@@ -6,3 +6,5 @@ librerioa de sha 256
 https://www.npmjs.com/package/sha256
 
 para correr node dev/test.js
+
+Realizar un debug de el hash creator
