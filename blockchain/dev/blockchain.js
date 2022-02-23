@@ -38,23 +38,22 @@ Blockchain.prototype.createNewTransaction = function( amount, sender, recipient 
 		sender: sender, // este va a tomar la direccion del que envia 
 		recipient: recipient, //tomar la direccion del que recive
 	}
+	this.pendingTransaction.push(newTransaction);
+	return this.getLastBlock()['index'] =1;
 
-return newTransaction;
+//return newTransaction;
 
 }
 
-Blockchain.prototype.addTransactionToPendingTransactions = function(transactionObj) {
-	this.pendingTransactions.push(transactionObj);
-	return this.getLastBlock()['index'] + 1;
-};
 
 // hashBlock method
 
 Blockchain.prototype.hashBlock = function(previousBlockHash, currentBlockData, nonce) { // es la data que se va a juntar para crear el hash
 
 	const sha256 = require('sha256'); // importar la libreria SHA256
-	const dataAsString = previousBlockHash + nonce.toString(int) + JSON.stringify(currentBlockData);
+	const dataAsString = previousBlockHash + nonce.toString() + JSON.stringify(currentBlockData);
 	const hash = sha256(dataAsString); // asi es como se crea el hash del bloque y todos los demas que pasan por la funcion
+	
 	return hash;
 
 }
