@@ -18,7 +18,7 @@ prueba de el hash del bloque
 //PRUEBA PARA VER LAS TRANSEACIONES GENERADAS 
 
 //ASECCO PARA INSPECIONAR EL >>>>
-//console.log(bitcoin.chain[0]);// numero es la cadena de bloques creados en el tiempo
+console.log(bitcoin);// numero es la cadena de bloques creados en el tiempo
 
 bitcoin.createNewBlock(2389, 'OIUOEREEDHKDE', '78s97d4x6dsf');
 
@@ -40,7 +40,7 @@ bitcoin.createNewTransaction(100, 'ALEXH845SJ5TKCJ2', 'JENN5BG5DF6HTGFAD');
 bitcoin.createNewTransaction(100, 'ALEXH845SJ5TKCJ2', 'JENN5BG5DF6HTGFAD');
 bitcoin.createNewTransaction(100, 'ALEXH845SJ5TKCJ2', 'JENN5BG5DF6HTGFAD');
 
-console.log(bitcoin.chain[1]);
+//console.log(bitcoin.chain[1]);
 //TODO: no esta recibiendo o alojando las transaciones
 
 
@@ -134,17 +134,9 @@ bitcoin.createNewBlock(2389, 'OIUOEREEDHKDE', '78s97d4x6dsf');
 
 
 
-
-
-
-
-//OTRA PRUEBA NO CONFundir
-
-
-
 //bitcoin.hashBlock();//no hay que llemarlo aca por que no se ha generaro una transacion
 
- previousBlockHash = '687765DA6CCF0668238C1D372737DS11';
+previousBlockHash = '687765DA6CCF0668238C1D372737DS11';
 //no hay evidencia rapida de que a mayor transaciones mas tiemop en conseguir hash
 //eevidencia de a mayor transaciones mayor capacidad de computacion
  const currentBlockData = [{
@@ -187,7 +179,7 @@ bitcoin.createNewBlock(2389, 'OIUOEREEDHKDE', '78s97d4x6dsf');
 const nonce =100;// se le puede poner un parametro inicial al contador 
 
 /* PARA PRUEBA HASH DESACTIVAR LA PRUEBA DE PROOF OF WORK */
-//console.log(bitcoin.proofOfWork(previousBlockHash,currentBlockData));
+console.log(bitcoin.proofOfWork(previousBlockHash,currentBlockData));
 
 //llamando a este metod0o puedes ver el hash actual 
 bitcoin.hashBlock(previousBlockHash, currentBlockData, nonce);
