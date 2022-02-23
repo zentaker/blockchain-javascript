@@ -25,7 +25,7 @@ Realizar un debug de el hash creator
  deberia seguir la siguiente logica 
 
 
- `` 
+ ```
  
 Blockchain.prototype.proofOfWork = function(previousBlockHash, currentBlockData) {
 	let nonce = 0;//numero peligroso de seguridad
@@ -40,4 +40,4 @@ Blockchain.prototype.proofOfWork = function(previousBlockHash, currentBlockData)
 	//el sistema te los cuenta 
 };
 
-  ``
+  ```
